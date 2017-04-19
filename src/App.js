@@ -6,12 +6,12 @@ import ListNew from './containers/ListNew';
 import ListPage from './containers/ListPage';
 import ItemsPage from './containers/ItemsPage';
 import ItemsShow from './containers/ItemsShow';
+import ListShow from './containers/ListShow';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ItemsNew />
 
         <ListPage />
 
@@ -19,8 +19,7 @@ class App extends Component {
 
         <ItemsShow />
 
-        <h2>ListNew</h2>
-        <ListNew />
+        <ListShow />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>

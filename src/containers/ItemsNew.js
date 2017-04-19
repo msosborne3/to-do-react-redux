@@ -1,6 +1,6 @@
 const React = require('react');
 
-export default function DumberComponent(props) {
+export default function ItemsNew(props) {
   return (
     <div className="new-items">
       <form>

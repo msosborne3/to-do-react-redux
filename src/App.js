@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ItemsNew from './containers/ItemsNew';
 import ListNew from './containers/ListNew';
+import ListPage from './containers/ListPage';
 
 class App extends Component {
   render() {
@@ -10,13 +11,14 @@ class App extends Component {
       <div className="App">
         <ItemsNew />
 
+        <ListPage />
+
         <h2>ListNew</h2>
         <ListNew />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <h1>Hello!!</h1>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>

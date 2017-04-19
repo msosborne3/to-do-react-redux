@@ -4,6 +4,7 @@ import './App.css';
 import ItemsNew from './containers/ItemsNew';
 import ListNew from './containers/ListNew';
 import ListPage from './containers/ListPage';
+import ItemsPage from './containers/ItemsPage';
 
 class App extends Component {
   render() {
@@ -12,6 +13,8 @@ class App extends Component {
         <ItemsNew />
 
         <ListPage />
+
+        <ItemsPage />
 
         <h2>ListNew</h2>
         <ListNew />

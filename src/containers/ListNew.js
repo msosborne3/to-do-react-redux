@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
 
-/*export default function ListNew(props) {
-
-  return (
-    <div className="new-list">
-      <form onSubmit={(event) => this.handleSubmit(event)}>
-        <label>List Name: </label>
-        <input type="text" />
-        <br />
-        <input type="submit" value="Create List" />
-      </form>
-    </div>
-  );
-}*/
-
 class ListNew extends Component {
   constructor(props) {
     super(props);

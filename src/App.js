@@ -5,6 +5,7 @@ import ItemsNew from './containers/ItemsNew';
 import ListNew from './containers/ListNew';
 import ListPage from './containers/ListPage';
 import ItemsPage from './containers/ItemsPage';
+import ItemsShow from './containers/ItemsShow';
 
 class App extends Component {
   render() {
@@ -15,6 +16,8 @@ class App extends Component {
         <ListPage />
 
         <ItemsPage />
+
+        <ItemsShow />
 
         <h2>ListNew</h2>
         <ListNew />

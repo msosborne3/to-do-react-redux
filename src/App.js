@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DumbComponent from './components/DumbComponent';
 import DumberComponent from './components/DumberComponent';
+import ItemsNew from './containers/ItemsNew';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <DumbComponent />
         <DumberComponent />
+        <ItemsNew />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>

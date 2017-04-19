@@ -4,7 +4,10 @@ export default function DumberComponent(props) {
   return (
     <div className="new-items">
       <form>
-        <label>Name:</label>
+        <label>Item Name:</label>
+        <input type="text" />
+        <br />
+        <label>Description:</label>
         <input type="text" />
         <br />
         <label>Time Due:</label>
@@ -13,6 +16,10 @@ export default function DumberComponent(props) {
         <label>Location:</label>
         <input type="text" />
         <br />
+        <label>Done:</label>
+        <input type="checkbox" />
+        <br />
+        <input type="submit" value="Add Task" />
       </form>
     </div>
   );

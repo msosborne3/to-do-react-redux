@@ -4,19 +4,19 @@ export default function ItemsNew(props) {
   return (
     <div className="new-items">
       <form>
-        <label>Item Name:</label>
+        <label>Item Name: </label>
         <input type="text" />
         <br />
-        <label>Description:</label>
+        <label>Description: </label>
         <input type="text" />
         <br />
-        <label>Time Due:</label>
+        <label>Time Due: </label>
         <input type="text" />
         <br />
-        <label>Location:</label>
+        <label>Location: </label>
         <input type="text" />
         <br />
-        <label>Done:</label>
+        <label>Done: </label>
         <input type="checkbox" />
         <br />
         <input type="submit" value="Add Task" />

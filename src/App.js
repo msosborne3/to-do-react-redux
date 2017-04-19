@@ -13,6 +13,8 @@ class App extends Component {
     return (
       <div className="App">
 
+        <ListNew store={this.props.store} />
+
         <ListPage />
 
         <ItemsPage />

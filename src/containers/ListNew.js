@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+//import { browserHistory } from 'react-router';
+import { addList } from '../actions';
 
 class ListNew extends Component {
   constructor(props) {
@@ -17,13 +21,8 @@ class ListNew extends Component {
 
   handleSubmit(ev) {
     ev.preventDefault();
-    this.props.store.dispatch({
-      type: 'ADD_LIST',
-      list: this.state,
-    });
-    this.setState({
-      name: ''
-    })
+    this.props.addList(this.state);
+    //browserHistory.push('/lists');
   }
 
   render() {
@@ -40,4 +39,10 @@ class ListNew extends Component {
   }
 }
 
-export default ListNew;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addList: bindActionCreators(addList, dispatch)
+  };
+}
+
+export default connect(null, mapDispatchToProps)(ListNew);

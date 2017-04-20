@@ -5,10 +5,11 @@ import './index.css';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import listReducer from './reducers/listReducer';
+import itemsReducer from './reducers/itemsReducer';
 
 //const rootReducer = combineReducers({listReducer, itemsReducer});
 
-const store = createStore(listReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(itemsReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>

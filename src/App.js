@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+        <ItemsNew store={this.props.store} />
 
         <ItemsPage store={this.props.store} />
 

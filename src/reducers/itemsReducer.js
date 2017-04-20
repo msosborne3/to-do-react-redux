@@ -9,6 +9,16 @@ export default function itemsReducer(state= {
       let item = {id: id, text: action.item.text, done: action.item.done};
       // Return this list of items and adds it to the list already created.
       return {items: state.items.concat(item)};
+    case 'TOGGLE_DONE':
+      return state.map(item => {
+        if (item.id !== action.id) {
+          return item;
+        } 
+        
+        return {
+          ...item, done: !item.done
+        };
+      });
     default:
       return state;
   }

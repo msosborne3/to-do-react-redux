@@ -11,3 +11,10 @@ export function addItem(item) {
     item
   }
 }
+
+export function toggleDone(item) {
+  return {
+    type: 'TOGGLE_DONE',
+    item
+  }
+}

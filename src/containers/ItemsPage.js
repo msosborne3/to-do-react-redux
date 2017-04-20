@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 class ItemsPage extends Component {
 
   render() {
-    const items = this.props.items;
+    const items = this.props.items.items;
     return (
       <div>
         <h2>To-do Items</h2>

@@ -10,10 +10,11 @@ class ListPage extends Component {
       <div>
         <h2>To do lists</h2>
         <ul>
-          {this.props.lists.map((list) => 
+          {this.props.lists.lists.map((list) => 
             <li key={list.id}>{list.name}</li>
           )}
         </ul>
+        <p>PLACEHOLDER FOR ADD NEW LIST LINK</p>
       </div>
     );
   }

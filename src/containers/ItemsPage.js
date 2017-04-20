@@ -4,12 +4,14 @@ import { toggleDone } from '../actions/index'
 import { bindActionCreators } from 'redux';
 
 class ItemsPage extends Component {
+
   render() {
+    const items = this.props.items;
     return (
       <div>
         <h2>To-do Items</h2>
         <ul>
-          {this.props.items.map((item) => 
+          {items.map((item) => 
             <li key={item.id} onClick={() => {this.props.toggleDone(item)}}>{item.text}</li>
           )}
         </ul>

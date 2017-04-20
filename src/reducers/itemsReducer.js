@@ -10,15 +10,21 @@ export default function itemsReducer(state= {
       // Return this list of items and adds it to the list already created.
       return {items: state.items.concat(item)};
     case 'TOGGLE_DONE':
-      return state.items.map(item => {
-        if (item.id !== action.id) {
-          return item;
-        } 
-        // When the correct item is found, change it to done
-        return {
-          ...item, done: !item.done
-        };
+      // create an array of items
+      let items = state.items.map(item => {
+        // keep the item if it is not the item to be completed
+        if (item.id !== action.item.id) {
+          return item
+        }
+        // if the item needed is found then done is changed from
+        // false to true or true to false.
+        return Object.assign({}, item, {
+          done: !item.done
+        })
+
       });
+
+      return {items: items}
     default:
       return state;
   }

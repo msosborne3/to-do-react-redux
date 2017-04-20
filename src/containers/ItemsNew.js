@@ -10,7 +10,8 @@ class ItemsNew extends Component {
 
     this.state = {
       text: '',
-      done: false
+      done: false,
+      parentID: 1
     }
   }
 

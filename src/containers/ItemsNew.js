@@ -9,7 +9,8 @@ class ItemsNew extends Component {
     super(props);
 
     this.state = {
-      text: ''
+      text: '',
+      done: false
     }
   }
 

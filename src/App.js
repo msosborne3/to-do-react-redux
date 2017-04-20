@@ -14,6 +14,7 @@ class App extends Component {
 
         <ListNew store={this.props.store} />
         <ListPage store={this.props.store} />
+        <ListShow store={this.props.store} />
 
         <ItemsNew store={this.props.store} />
         <ItemsPage store={this.props.store} />

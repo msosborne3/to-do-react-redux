@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class ItemsPage extends Component {
   render() {
-    // for testing  
-    let items = [{id: 1, name: 'hw 1', description: 'Algebra Homework'}, {id: 2, name: 'hw 2', description: 'Chemistry Homework'}];
-
     return (
       <div>
-        <h2>Items on List</h2>
+        <h2>To-do Items</h2>
         <ul>
-          {items.map((item) => 
+          {this.props.items.map((item) => 
             <li key={item.id}>{item.name}</li>
           )}
         </ul>
@@ -18,4 +16,11 @@ class ItemsPage extends Component {
   }
 }
 
-export default ItemsPage;
+const mapStateToProps = (state) => {
+  return {
+    items: state.items
+  };
+};
+
+export default connect(mapStateToProps)(ItemsPage);
+

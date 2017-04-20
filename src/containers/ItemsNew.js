@@ -9,8 +9,7 @@ class ItemsNew extends Component {
     super(props);
 
     this.state = {
-      text: '',
-      done: false
+      text: ''
     }
   }
 
@@ -20,42 +19,33 @@ class ItemsNew extends Component {
     })
   }
 
-  handleOnDoneChange(ev) {
-    this.setState({
-        done: true
-    })
-  }
-
   handleSubmit(ev) {
     ev.preventDefault();
     this.props.addItem(this.state);
     //browserHistory.push('/lists');
     this.setState({
-      name: ''
+      text: ''
     })
   }
 
   render() {
     return (
-      <div className="new-items">
-        <form onSubmit={(event) => this.handleSubmit(event)>
-            <label>Text: </label>
-            <input type="text" onChange={(event) => this.handleOnTextChange(event)} value={this.state.text} />
-            <br />
-            <label>Done: </label>
-            <input type="checkbox" onChange={(event) => this.handleOnDoneChange(event)} value={this.state.done} />
-            <br />
-            <input type="submit" value="Add Task" />
-          </form>
-        </div>
+      <div className="new-list">
+        <form onSubmit={(event) => this.handleSubmit(event)}>
+          <label>Text: </label>
+          <input type="text" onChange={(event) => this.handleOnTextChange(event)} value={this.state.text} />
+          <br />
+          <input type="submit" value="Create List" />
+        </form>
+      </div>
     );
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addList: bindActionCreators(addItem, dispatch)
+    addItem: bindActionCreators(addItem, dispatch)
   };
 }
 
-export default connect(null, mapDispatchToProps)(ItemNew);
+export default connect(null, mapDispatchToProps)(ItemsNew);

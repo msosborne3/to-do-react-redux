@@ -12,7 +12,7 @@ class ItemsPage extends Component {
         <h2>To-do Items</h2>
         <ul>
           {items.map((item) => 
-            <li key={item.id} onClick={() => {this.props.toggleDone(item)}}>{item.text}</li>
+            <li key={item.id} onClick={() => {this.props.toggleDone(item)}}>{item.done ? <strike>{item.text}</strike> : item.text}</li>
           )}
         </ul>
       </div>

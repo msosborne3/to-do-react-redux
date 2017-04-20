@@ -23,6 +23,9 @@ class ListNew extends Component {
     ev.preventDefault();
     this.props.addList(this.state);
     //browserHistory.push('/lists');
+    this.setState({
+      name: ''
+    })
   }
 
   render() {

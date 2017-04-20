@@ -13,15 +13,11 @@ class App extends Component {
     return (
       <div className="App">
 
-        <ListNew store={this.props.store} />
 
-        <ListPage />
+        <ItemsPage store={this.props.store} />
 
-        <ItemsPage />
+        <ItemsShow store={this.props.store} />
 
-        <ItemsShow />
-
-        <ListShow />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>

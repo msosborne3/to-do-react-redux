@@ -1,14 +1,15 @@
+let id = 0;
 export default function itemsReducer(state= {
   items: []
 }, action) {
   switch(action.type) {
-    /*case 'ADD_LIST':
-      id++; // Increment id to keep track of the list
-      // Create a new list item with an id and the list passed through
-      let list = {id: id, name: action.list.name};
-      // Return this list add to the lists already created.
-      return {lists: state.lists.concat(list)};
+    case 'ADD_ITEM':
+      id++;
+      // Create a new to do item with an id
+      let item = {id: id, text: action.item.text, done: action.item.done};
+      // Return this list of items and adds it to the list already created.
+      return {items: state.items.concat(item)};
     default:
-      return state;*/
+      return state;
   }
 };

@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers'
 //Routing:
 import { Switch, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
+import Home from './components/Home';
 import ListPage from './containers/ListPage';
 import ListShow from './containers/ListShow';
 import ListNew from './containers/ListNew';
@@ -22,7 +23,6 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/lists' component={ListPage} />
           <Route exact path='/lists/new' component={ListNew} />
           <Route exact path='/lists/:id' component={ListShow} />
           <Route exact path='/items/new' component={ItemsNew} />

@@ -1,6 +1,6 @@
 let id = 0;
 export default function listReducer(state= {
-  lists: []
+  lists: [{id: 0, name: 'list1'}]
 }, action) {
   switch(action.type) {
     case 'ADD_LIST':
